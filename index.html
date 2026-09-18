@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>New Website Design &amp; Development in Delhi | BTech Marketing Wala</title>
-<meta name="description" content="Need a new website? BTech Marketing Wala designs and builds fast, mobile-first websites that convert — on Shopify, WordPress or custom code, starting at ₹9,000. Backed by the same team for branding, ads and SEO once it's live. Free audit within 24 hours.">
+<title>Website Design &amp; Development in Delhi | BTech Marketing Wala</title>
+<meta name="description" content="Need a new website? Fast, mobile-first sites built to convert, starting at ₹9,000 — plus branding, ads and SEO from the same team once you're live. Free quote in 24 hours.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://btechmarketingwala.in/">
 <meta name="theme-color" content="#0D0F14">
@@ -13,7 +13,7 @@
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="BTech Marketing Wala">
-<meta property="og:title" content="New Website Design &amp; Development in Delhi | BTech Marketing Wala">
+<meta property="og:title" content="Website Design &amp; Development in Delhi | BTech Marketing Wala">
 <meta property="og:description" content="A conversion-ready website built around your business, starting at ₹9,000 — then the branding, ads and SEO to fill it with customers, all from one team.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://btechmarketingwala.in/">
@@ -25,12 +25,13 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="New Website Design &amp; Development in Delhi | BTech Marketing Wala">
+<meta name="twitter:title" content="Website Design &amp; Development in Delhi | BTech Marketing Wala">
 <meta name="twitter:description" content="Fast, mobile-first websites that convert — starting at ₹9,000. Branding, ads and SEO from the same team once you're live.">
 <meta name="twitter:image" content="https://btechmarketingwala.in/assets/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
 
 <script type="application/ld+json">
 {
@@ -42,6 +43,7 @@
   "url": "https://btechmarketingwala.in/",
   "image": "https://btechmarketingwala.in/assets/og-image.png",
   "email": "btechwalaagency@gmail.com",
+  "telephone": "+91-72910-04406",
   "priceRange": "₹500 - ₹9,000+",
   "address": {
     "@type": "PostalAddress",
@@ -71,6 +73,47 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a new website cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Website design & development starts at ₹9,000. The exact price depends on the number of pages, features and whether you need e-commerce — we'll confirm it after a quick chat about your business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which platforms do you build on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whatever fits your business best — Shopify for online stores, WordPress for content-heavy sites, or fully custom code when you need something specific."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after my website is live?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can stop there, or plug straight into our growth funnel — branding, Google & Meta Ads, SEO and video, all run by the same team that built your site."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer support after launch, and is there a contract?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — we design, build, launch and maintain your site, and there's no lock-in contract. We earn your renewal every month with results."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
@@ -79,8 +122,6 @@
   [hidden]{display:none!important}
 </style>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
   :root{
     --ink:#0D0F14;
     --ink-2:#171A21;
@@ -457,6 +498,27 @@
   .pkg li:last-child{ border-bottom:none; padding-bottom:0; }
   .pkg li::before{ content:'—'; color:var(--accent); flex-shrink:0; }
 
+  /* ---------- FAQ ---------- */
+  .faq-list{ display:flex; flex-direction:column; gap:12px; }
+  .faq-item{
+    border:1px solid var(--border); border-radius:14px; background:var(--bg-raised);
+    padding:4px 22px; transition:border-color .18s, background .18s;
+  }
+  .faq-item[open]{ border-color:var(--accent); background:var(--bg-sunken); }
+  .faq-item summary{
+    list-style:none; cursor:pointer; padding:18px 0;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    font-family:'Manrope',sans-serif; font-weight:700; font-size:.98rem; color:var(--fg);
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary .plus{
+    flex-shrink:0; width:22px; height:22px; border-radius:50%; border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace;
+    font-size:1rem; color:var(--accent); transition:transform .2s ease;
+  }
+  .faq-item[open] summary .plus{ transform:rotate(45deg); }
+  .faq-item p{ font-size:.9rem; padding-bottom:20px; max-width:64ch; }
+
   /* ---------- TOOLS STRIP ---------- */
   .tools{ border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
   .tools-inner{ display:flex; flex-wrap:wrap; gap:10px 0; justify-content:space-between; padding:26px 0; }
@@ -550,6 +612,7 @@
       <a href="#process">Process</a>
       <a href="#why">Why Us</a>
       <a href="#packages">Packages</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn-primary btn-sm" href="https://wa.me/917291004406?text=Hi%2C%20I%27d%20like%20a%20free%20website%20quote" target="_blank" rel="noopener">Get a Free Website Quote</a>
   </div>
@@ -824,6 +887,33 @@
         </div>
       </div>
       <p style="margin-top:22px; font-size:.85rem;">Mixing services? Bundle pricing is available &mdash; write in for a custom quote.</p>
+    </div>
+  </section>
+
+  <section class="sec-pad" id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal-up">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions people ask before their first project.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal-up">
+          <summary>How much does a new website cost?<span class="plus">+</span></summary>
+          <p>Website design &amp; development starts at &#8377;9,000. The exact price depends on the number of pages, features and whether you need e-commerce &mdash; we'll confirm it after a quick chat about your business.</p>
+        </details>
+        <details class="faq-item reveal-up">
+          <summary>Which platforms do you build on?<span class="plus">+</span></summary>
+          <p>Whatever fits your business best &mdash; Shopify for online stores, WordPress for content-heavy sites, or fully custom code when you need something specific.</p>
+        </details>
+        <details class="faq-item reveal-up">
+          <summary>What happens after my website is live?<span class="plus">+</span></summary>
+          <p>You can stop there, or plug straight into our growth funnel &mdash; branding, Google &amp; Meta Ads, SEO and video, all run by the same team that built your site.</p>
+        </details>
+        <details class="faq-item reveal-up">
+          <summary>Do you offer support after launch, and is there a contract?<span class="plus">+</span></summary>
+          <p>Yes &mdash; we design, build, launch and maintain your site, and there's no lock-in contract. We earn your renewal every month with results.</p>
+        </details>
+      </div>
     </div>
   </section>
 
