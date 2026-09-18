@@ -242,6 +242,14 @@
   }
   .hero-eyebrow::before{ content:''; width:26px; height:1px; background:var(--gold); }
 
+  .hero-badge{
+    display:inline-flex; align-items:center; gap:8px; margin-bottom:18px;
+    padding:8px 16px; border-radius:100px; border:1px solid color-mix(in srgb, var(--gold) 45%, transparent);
+    background:color-mix(in srgb, var(--gold) 12%, transparent);
+    font-family:'Manrope',sans-serif; font-weight:700; font-size:.82rem; color:var(--gold);
+  }
+  .hero-badge .dot2{ width:7px; height:7px; border-radius:50%; background:var(--gold); flex-shrink:0; }
+
   .hero-sub{
     max-width:46ch; margin-top:24px; font-size:1.05rem; color:#B9BAC2; line-height:1.7;
   }
@@ -469,6 +477,7 @@
     <div class="hero-grid" style="position:relative;">
       <canvas id="hookCanvas"></canvas>
       <div style="position:relative;">
+        <div class="hero-badge"><span class="dot2"></span> Yes &mdash; we build brand-new websites, start to finish</div>
         <div class="hero-eyebrow">Website Design &amp; Development in Delhi &mdash; Built to Convert</div>
         <h1>Your website should be <em>closing sales</em>&mdash;<br>not just sitting there.</h1>
         <p class="hero-sub">If your site isn't turning visitors into customers, it's not doing its job. We build fast, mobile-first websites made to convert &mdash; on Shopify, WordPress or custom code. Then, when you're ready to bring in traffic, the same team runs your branding, ads and SEO too.</p>
