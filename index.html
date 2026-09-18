@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Digital Marketing Agency in Delhi | Websites, SEO &amp; Ads — BTech Marketing Wala</title>
-<meta name="description" content="BTech Marketing Wala is a full-funnel digital marketing agency in Delhi. Website design &amp; development, logo &amp; branding, Google &amp; Meta Ads, SEO, UGC video and Google Maps ranking — all under one team. Free audit within 24 hours.">
+<title>New Website Design &amp; Development in Delhi | BTech Marketing Wala</title>
+<meta name="description" content="Need a new website? BTech Marketing Wala designs and builds fast, mobile-first websites that convert — on Shopify, WordPress or custom code, starting at ₹9,000. Backed by the same team for branding, ads and SEO once it's live. Free audit within 24 hours.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://btechmarketingwala.in/">
 <meta name="theme-color" content="#0D0F14">
@@ -13,20 +13,20 @@
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="BTech Marketing Wala">
-<meta property="og:title" content="Digital Marketing Agency in Delhi | Websites, SEO &amp; Ads — BTech Marketing Wala">
-<meta property="og:description" content="One team for your website, your brand and every rupee of ad spend. Websites, branding, Google &amp; Meta Ads, SEO and video — built and run together.">
+<meta property="og:title" content="New Website Design &amp; Development in Delhi | BTech Marketing Wala">
+<meta property="og:description" content="A conversion-ready website built around your business, starting at ₹9,000 — then the branding, ads and SEO to fill it with customers, all from one team.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://btechmarketingwala.in/">
 <meta property="og:locale" content="en_IN">
 <meta property="og:image" content="https://btechmarketingwala.in/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="BTech Marketing Wala — Digital Marketing Agency in Delhi">
+<meta property="og:image:alt" content="BTech Marketing Wala — Website Design &amp; Development in Delhi">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Digital Marketing Agency in Delhi | Websites, SEO &amp; Ads — BTech Marketing Wala">
-<meta name="twitter:description" content="Websites, branding and performance ads that grow your business — built and run by one team in Delhi.">
+<meta name="twitter:title" content="New Website Design &amp; Development in Delhi | BTech Marketing Wala">
+<meta name="twitter:description" content="Fast, mobile-first websites that convert — starting at ₹9,000. Branding, ads and SEO from the same team once you're live.">
 <meta name="twitter:image" content="https://btechmarketingwala.in/assets/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@
   "@type": "AdvertisingAgency",
   "name": "BTech Marketing Wala",
   "alternateName": "BTech Marketing Wala Agency",
-  "description": "Full-funnel digital marketing agency in Delhi offering website design & development, logo & brand identity, Facebook & Instagram Ads, Google Ads, YouTube & UGC video, performance marketing, SEO and Google Maps / local ranking.",
+  "description": "Website design & development agency in Delhi, building fast, mobile-first, conversion-ready websites — with logo & brand identity, Facebook & Instagram Ads, Google Ads, YouTube & UGC video, performance marketing, SEO and Google Maps / local ranking available from the same team.",
   "url": "https://btechmarketingwala.in/",
   "image": "https://btechmarketingwala.in/assets/og-image.png",
   "email": "btechwalaagency@gmail.com",
@@ -305,6 +305,31 @@
     text-transform:uppercase; color:var(--fg-soft); opacity:.75;
   }
 
+  /* ---------- FUNNEL ---------- */
+  .funnel-list{ display:flex; flex-direction:column; gap:12px; }
+  .funnel-row{
+    display:grid; grid-template-columns:60px 1fr auto; gap:22px; align-items:center;
+    padding:22px 26px; border:1px solid var(--border); border-radius:14px; background:var(--bg-raised);
+    box-shadow:var(--shadow);
+  }
+  .funnel-row:nth-child(1){ width:100%; margin-inline:auto; }
+  .funnel-row:nth-child(2){ width:93%; margin-inline:auto; }
+  .funnel-row:nth-child(3){ width:86%; margin-inline:auto; }
+  .funnel-row:nth-child(4){ width:79%; margin-inline:auto; }
+  .funnel-row:nth-child(5){ width:72%; margin-inline:auto; }
+  .funnel-num{ font-family:'Fraunces',serif; font-style:italic; font-size:1.5rem; color:var(--accent); font-weight:600; }
+  .funnel-body h3{ font-size:1.05rem; margin-bottom:4px; }
+  .funnel-body p{ font-size:.87rem; }
+  .funnel-tag{
+    font-family:'JetBrains Mono',monospace; font-size:.64rem; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--fg-soft); white-space:nowrap; padding:6px 12px; border:1px solid var(--border); border-radius:100px;
+  }
+  @media (max-width:700px){
+    .funnel-row{ grid-template-columns:40px 1fr; padding:18px 20px; }
+    .funnel-tag{ grid-column:2/3; justify-self:start; margin-top:4px; }
+    .funnel-row:nth-child(n){ width:100%!important; }
+  }
+
   /* ---------- PROCESS ---------- */
   .process{ background:var(--bg-sunken); }
   .process-list{ display:flex; flex-direction:column; }
@@ -429,11 +454,12 @@
     </a>
     <nav class="links">
       <a href="#services">Services</a>
+      <a href="#funnel">Growth Funnel</a>
       <a href="#process">Process</a>
       <a href="#why">Why Us</a>
       <a href="#packages">Packages</a>
     </nav>
-    <a class="btn btn-primary btn-sm" href="mailto:btechwalaagency@gmail.com?subject=Let%27s%20grow%20my%20business">Get a Free Audit</a>
+    <a class="btn btn-primary btn-sm" href="mailto:btechwalaagency@gmail.com?subject=New%20Website%20Quote%20Request">Get a Free Website Quote</a>
   </div>
 </header>
 
@@ -443,27 +469,27 @@
     <div class="hero-grid" style="position:relative;">
       <canvas id="hookCanvas"></canvas>
       <div style="position:relative;">
-        <div class="hero-eyebrow">Digital Marketing Agency in Delhi &mdash; Full-Funnel Growth Studio</div>
-        <h1>We build the <em>hook</em>,<br>the site, the ads&mdash;<br>and the sale.</h1>
-        <p class="hero-sub">One team for your website, your brand, and every rupee of ad spend. We design it, we shoot it, we run it, we report it&mdash;so you spend less time chasing vendors and more time taking calls from new customers.</p>
+        <div class="hero-eyebrow">Website Design &amp; Development in Delhi &mdash; Built to Convert</div>
+        <h1>Need a <em>new website</em>?<br>We design it, build it,<br>and get it selling.</h1>
+        <p class="hero-sub">A fast, mobile-first website built around your business, live in weeks &mdash; on Shopify, WordPress or custom code. And when you're ready to bring in customers, the same team handles your branding, ads and SEO too.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="mailto:btechwalaagency@gmail.com?subject=Free%20Marketing%20Audit%20Request">Request Free Audit</a>
-          <a class="btn btn-ghost" href="#services" style="color:#fff;border-color:#33363F;">See what we do &darr;</a>
+          <a class="btn btn-primary" href="mailto:btechwalaagency@gmail.com?subject=New%20Website%20Quote%20Request">Get a Free Website Quote</a>
+          <a class="btn btn-ghost" href="#packages" style="color:#fff;border-color:#33363F;">See website pricing &darr;</a>
         </div>
-        <div class="hero-note">No lock-in contracts &middot; Response within 24 hours &middot; Serving brands across India</div>
+        <div class="hero-note">Starting at &#8377;9,000 &middot; No lock-in contracts &middot; Response within 24 hours</div>
       </div>
       <div class="hero-side">
         <div class="hero-card">
+          <div class="num">&#8377;9K</div>
+          <div class="label">Starting price for a conversion-ready, mobile-first website</div>
+        </div>
+        <div class="hero-card">
           <div class="num">1</div>
-          <div class="label">Team for site, brand &amp; ads &mdash; nothing falls through the cracks between vendors</div>
+          <div class="label">Team for your site, brand &amp; ads &mdash; nothing falls through the cracks between vendors</div>
         </div>
         <div class="hero-card">
           <div class="num">360&deg;</div>
-          <div class="label">Coverage: web, creative, paid, organic &mdash; built to work as one funnel</div>
-        </div>
-        <div class="hero-card">
-          <div class="num">7</div>
-          <div class="label">Core services, one point of contact, one weekly report</div>
+          <div class="label">Once your site is live: branding, ads, SEO &mdash; all under one roof</div>
         </div>
       </div>
     </div>
@@ -479,8 +505,8 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">What We Do</span>
-        <h2>Every piece of your marketing, under one roof.</h2>
-        <p style="margin-top:14px;">From the first logo sketch to the ad that closes the sale &mdash; we plan, build and run it together, so your brand looks and sounds the same everywhere it shows up.</p>
+        <h2>Start with a website that works &mdash; add the rest when you're ready.</h2>
+        <p style="margin-top:14px;">Website design &amp; development is where we start every client. Once it's live, the same team can handle your branding, ads and SEO &mdash; so everything you put out looks and sounds the same everywhere it shows up.</p>
       </div>
 
       <div class="service-grid">
@@ -542,6 +568,59 @@
           <span class="tag">Content &middot; Community</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="sec-pad" id="funnel">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">The Growth Funnel</span>
+        <h2>Your website is step one. Here's where clients go next.</h2>
+        <p style="margin-top:14px;">Most of our website clients don't stop at the site &mdash; once it's live, we help fill it with the right traffic, in this order.</p>
+      </div>
+      <div class="funnel-list">
+        <div class="funnel-row">
+          <div class="funnel-num mono">01</div>
+          <div class="funnel-body">
+            <h3>New Website</h3>
+            <p>A fast, mobile-first site built to convert &mdash; the foundation everything else sends traffic to.</p>
+          </div>
+          <span class="funnel-tag">Start here</span>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-num mono">02</div>
+          <div class="funnel-body">
+            <h3>Logo &amp; Brand Identity</h3>
+            <p>A consistent look across your site, packaging and ads &mdash; so new visitors recognise you everywhere.</p>
+          </div>
+          <span class="funnel-tag">Look consistent</span>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-num mono">03</div>
+          <div class="funnel-body">
+            <h3>Google &amp; Meta Ads</h3>
+            <p>Send targeted traffic to the site we just built &mdash; measured against cost per lead, not just clicks.</p>
+          </div>
+          <span class="funnel-tag">Fill the funnel</span>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-num mono">04</div>
+          <div class="funnel-body">
+            <h3>SEO &amp; Google Maps Ranking</h3>
+            <p>Keep bringing in customers organically, so you're not paying for every single visitor.</p>
+          </div>
+          <span class="funnel-tag">Compound growth</span>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-num mono">05</div>
+          <div class="funnel-body">
+            <h3>Video, UGC &amp; Social</h3>
+            <p>Keep the audience you've built engaged &mdash; and give your ads fresh creative to test.</p>
+          </div>
+          <span class="funnel-tag">Stay top of mind</span>
+        </div>
+      </div>
+      <p style="margin-top:26px; font-size:.85rem;">Want your website to plug straight into this funnel? <a href="mailto:btechwalaagency@gmail.com?subject=Website%20%2B%20Growth%20Funnel%20Quote" style="color:var(--accent); font-weight:700;">Ask us to bundle it in</a>.</p>
     </div>
   </section>
 
@@ -671,10 +750,10 @@
     <div class="wrap">
       <div class="cta-banner">
         <div>
-          <h2>Let's find out what your marketing is missing.</h2>
-          <p>Send us your website or Instagram &mdash; we'll send back a free audit with three things you can fix this week.</p>
+          <h2>Ready for a website that actually brings in customers?</h2>
+          <p>Tell us about your business &mdash; we'll send back a free quote and a timeline for your new website within 24 hours.</p>
         </div>
-        <a class="btn btn-primary" href="mailto:btechwalaagency@gmail.com?subject=Free%20Marketing%20Audit%20Request">Request Free Audit</a>
+        <a class="btn btn-primary" href="mailto:btechwalaagency@gmail.com?subject=New%20Website%20Quote%20Request">Get a Free Website Quote</a>
       </div>
     </div>
   </section>
@@ -709,7 +788,7 @@
         <h4>Get in touch</h4>
         <div class="flinks">
           <a href="mailto:btechwalaagency@gmail.com">btechwalaagency@gmail.com</a>
-          <a href="mailto:btechwalaagency@gmail.com?subject=Free%20Marketing%20Audit%20Request">Request a free audit</a>
+          <a href="mailto:btechwalaagency@gmail.com?subject=New%20Website%20Quote%20Request">Get a free website quote</a>
         </div>
       </div>
     </div>
