@@ -304,8 +304,20 @@
     background:var(--ink); color:var(--paper);
     padding:88px 0 0;
     overflow:hidden;
+    position:relative;
   }
   :root[data-theme="light"] .hero, :root:not([data-theme]) .hero { }
+  .hero::before{
+    content:''; position:absolute; top:-140px; left:-100px; width:460px; height:460px;
+    background:radial-gradient(circle, color-mix(in srgb, var(--gold) 38%, transparent), transparent 70%);
+    filter:blur(50px); pointer-events:none; z-index:0;
+    animation:heroGlow 7s ease-in-out infinite;
+  }
+  @keyframes heroGlow{
+    0%,100%{ opacity:.45; transform:scale(1); }
+    50%{ opacity:.8; transform:scale(1.15); }
+  }
+  @media (prefers-reduced-motion: reduce){ .hero::before{ animation:none; opacity:.6; } }
   .hero-grid{
     max-width:1180px; margin:0 auto; padding:0 28px 64px;
     display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:end;
@@ -676,8 +688,8 @@
 <main id="top">
 
   <section class="hero">
+    <canvas id="hookCanvas"></canvas>
     <div class="hero-grid" style="position:relative;">
-      <canvas id="hookCanvas"></canvas>
       <div style="position:relative;">
         <div class="hero-badge"><span class="dot2"></span> Yes &mdash; we build brand-new websites, start to finish</div>
         <div class="hero-divider" aria-hidden="true"></div>
