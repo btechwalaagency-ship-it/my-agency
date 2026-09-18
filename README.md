@@ -9,6 +9,22 @@ Website for BTech Marketing Wala — a full-service digital marketing studio bas
 | File | What it is |
 |---|---|
 | `index.html` | The entire website — HTML, CSS and JavaScript in one self-contained file. No build step, no dependencies. |
+| `assets/og-image.png` | Social share preview image (Open Graph / Twitter card), 1200×630. |
+| `robots.txt` | Tells search engines which pages to crawl and points to the sitemap. |
+| `sitemap.xml` | Lists the site's pages for search engines. |
+| `CNAME` | Custom domain for GitHub Pages (`btechmarketingwala.in`). |
+
+## SEO
+
+The site ships with on-page and technical SEO already in place:
+
+- Unique `<title>` and meta description targeting "digital marketing agency in Delhi"
+- Canonical URL, `robots` meta tag, `robots.txt` and `sitemap.xml`
+- Open Graph and Twitter Card tags with a branded social preview image
+- `AdvertisingAgency` (LocalBusiness) JSON-LD structured data listing services, price range and service area
+- Semantic HTML (single `h1`, ordered `h2`/`h3`), `preconnect` for Google Fonts, decorative icons marked `aria-hidden`
+
+If the business gets a phone number or a specific street address, add them to the `address`/`telephone` fields in the JSON-LD block near the top of `index.html` — that strengthens local (Google Maps) ranking further.
 
 ## Running it locally
 
