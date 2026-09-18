@@ -237,6 +237,38 @@
   nav.links a:hover{ color:var(--fg); border-color:var(--accent); }
   @media (max-width:860px){ nav.links{ display:none; } }
 
+  .nav-toggle{
+    display:none; flex-direction:column; justify-content:center; gap:5px;
+    width:38px; height:38px; padding:0; border:1px solid var(--border); border-radius:10px;
+    background:transparent; cursor:pointer; flex-shrink:0;
+  }
+  .nav-toggle span{
+    display:block; width:16px; height:2px; margin:0 auto; background:var(--fg);
+    transition:transform .2s ease, opacity .2s ease;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  @media (max-width:860px){ .nav-toggle{ display:flex; } }
+
+  .mobile-menu{
+    display:none; flex-direction:column;
+    border-top:1px solid var(--border); background:var(--bg);
+    padding:16px 20px 18px;
+  }
+  .mobile-menu.open{ display:flex; }
+  .mobile-menu .btn-primary{ justify-content:center; margin-bottom:10px; }
+  .mobile-menu a:not(.btn){
+    padding:14px 2px; font-size:.95rem; font-weight:600; color:var(--fg-soft);
+    border-bottom:1px solid var(--border);
+  }
+  .mobile-menu a:not(.btn):last-child{ border-bottom:none; }
+  @media (min-width:861px){ .mobile-menu{ display:none!important; } }
+  @media (max-width:640px){
+    .nav-inner{ padding:14px 20px; gap:12px; }
+    .nav-inner > a.btn{ display:none; }
+  }
+
   .btn{
     display:inline-flex; align-items:center; gap:8px;
     font-family:'Manrope',sans-serif; font-weight:700; font-size:.86rem;
@@ -471,7 +503,8 @@
   .rate-row:hover .rate-price .amt{ transform:scale(1.08); }
   .rate-price .unit{ display:block; font-family:'JetBrains Mono',monospace; font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; color:var(--fg-soft); margin-top:2px; }
   @media (max-width:600px){
-    .rate-row{ grid-template-columns:1fr; gap:8px; }
+    .rate-row{ grid-template-columns:1fr; gap:8px; padding:20px 14px; margin:0 -14px; }
+    .rate-row:hover{ transform:none; }
     .rate-price{ text-align:left; }
   }
   .pkg-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
@@ -615,7 +648,19 @@
       <a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn-primary btn-sm" href="https://wa.me/917291004406?text=Hi%2C%20I%27d%20like%20a%20free%20website%20quote" target="_blank" rel="noopener">Get a Free Website Quote</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a class="btn btn-primary" href="https://wa.me/917291004406?text=Hi%2C%20I%27d%20like%20a%20free%20website%20quote" target="_blank" rel="noopener">Get a Free Website Quote</a>
+    <a href="#services">Services</a>
+    <a href="#funnel">Growth Funnel</a>
+    <a href="#process">Process</a>
+    <a href="#why">Why Us</a>
+    <a href="#packages">Packages</a>
+    <a href="#faq">FAQ</a>
+  </nav>
 </header>
 
 <main id="top">
@@ -984,6 +1029,27 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // mobile nav toggle
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('mobileMenu');
+    if(!toggle || !menu) return;
+    function close(){
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    toggle.addEventListener('click', function(){
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', close);
+    });
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 860) close();
+    });
+  })();
 
   // scroll-reveal: fade/rise sections and cards into view, staggered per group
   (function(){
