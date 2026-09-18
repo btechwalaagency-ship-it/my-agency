@@ -343,7 +343,7 @@
   }
 
   .hero-badge{
-    display:inline-flex; align-items:center; gap:9px; margin-bottom:18px;
+    display:inline-flex; align-items:center; gap:9px; margin-bottom:14px;
     padding:8px 16px 8px 14px; border-radius:100px; border:1px solid color-mix(in srgb, var(--gold) 50%, transparent);
     background:linear-gradient(100deg, color-mix(in srgb, var(--gold) 20%, transparent), color-mix(in srgb, var(--coral) 14%, transparent));
     font-family:'Manrope',sans-serif; font-weight:700; font-size:.82rem; color:var(--gold);
@@ -354,6 +354,15 @@
     width:8px; height:8px; border-radius:50%; background:var(--gold); flex-shrink:0;
     animation:pulseDot 1.8s ease-out infinite;
   }
+
+  .hero-divider{
+    width:64px; height:2px; margin:0 0 14px; border-radius:2px; transform-origin:left center;
+    background:linear-gradient(90deg, var(--gold), var(--coral), var(--gold));
+    background-size:200% 100%;
+    animation:lineGrow .7s cubic-bezier(.16,.84,.44,1) .5s both, lineShimmer 2.6s ease-in-out .9s infinite;
+  }
+  @keyframes lineGrow{ from{ transform:scaleX(0); opacity:0; } to{ transform:scaleX(1); opacity:1; } }
+  @keyframes lineShimmer{ 0%,100%{ background-position:0% 50%; } 50%{ background-position:100% 50%; } }
 
   .hero-sub{
     max-width:46ch; margin-top:24px; font-size:1.05rem; color:#B9BAC2; line-height:1.7;
@@ -375,8 +384,9 @@
   .hero h1{ animation:fadeUp .7s ease .16s both; }
 
   @media (prefers-reduced-motion: reduce){
-    .hero-badge, .hero-eyebrow, .hero h1, .hero-sub, .hero-cta, .hero-note,
+    .hero-badge, .hero-eyebrow, .hero h1, .hero-sub, .hero-cta, .hero-note, .hero-divider,
     .hero-badge .dot2, .hero-cta .btn-primary{ animation:none!important; }
+    .hero-divider{ transform:none; opacity:1; }
   }
 
   .hero-side{ display:flex; flex-direction:column; gap:18px; }
@@ -670,6 +680,7 @@
       <canvas id="hookCanvas"></canvas>
       <div style="position:relative;">
         <div class="hero-badge"><span class="dot2"></span> Yes &mdash; we build brand-new websites, start to finish</div>
+        <div class="hero-divider" aria-hidden="true"></div>
         <div class="hero-eyebrow">Website Design &amp; Development in Delhi &mdash; Built to Convert</div>
         <h1>Your website should be <em>closing sales</em>&mdash;<br>not just sitting there.</h1>
         <p class="hero-sub">If your site isn't turning visitors into customers, it's not doing its job. We build fast, mobile-first websites made to convert &mdash; on Shopify, WordPress or custom code. Then, when you're ready to bring in traffic, the same team runs your branding, ads and SEO too.</p>
