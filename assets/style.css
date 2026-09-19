@@ -292,17 +292,29 @@ nav.links a:hover, nav.links a.active{ color:var(--fg); border-color:var(--accen
 
 /* hook chips: fill the empty upper-right of the hero above the stat cards.
    Normal flow (not absolutely positioned) so it can never overlap the cards
-   below it, regardless of how the headline reflows at in-between widths. */
+   below it, regardless of how the headline reflows at in-between widths.
+   Shown on every screen size, not just desktop. */
 .hook-label{
-  font-family:'JetBrains Mono',monospace; font-size:.72rem; font-weight:600;
-  letter-spacing:.14em; text-transform:uppercase; color:var(--gold);
+  display:inline-flex; align-items:center; gap:10px;
   animation:fadeUp .6s ease both;
 }
+.hook-label .hook-icon{
+  width:20px; height:20px; flex-shrink:0; color:var(--gold);
+  animation:hookSwing 2.4s ease-in-out infinite;
+  transform-origin:50% 15%;
+}
+.hook-label .hook-text{
+  font-family:'JetBrains Mono',monospace; font-size:.92rem; font-weight:700;
+  letter-spacing:.08em; text-transform:uppercase;
+  background:linear-gradient(100deg, var(--gold), var(--coral) 75%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+@media (max-width:640px){ .hook-label .hook-text{ font-size:.8rem; } }
+@keyframes hookSwing{ 0%,100%{ transform:rotate(-12deg); } 50%{ transform:rotate(14deg); } }
 .hook-cloud{
   display:flex; flex-wrap:wrap; gap:10px;
   animation:fadeUp .6s ease .1s both;
 }
-@media (max-width:900px){ .hook-label, .hook-cloud{ display:none; } }
 .hook-chip{
   display:inline-flex; align-items:center; gap:7px;
   padding:8px 16px; border-radius:100px; border:1px solid #2A2E38;
@@ -315,7 +327,9 @@ nav.links a:hover, nav.links a.active{ color:var(--fg); border-color:var(--accen
 .hook-chip.gold{ border-color:color-mix(in srgb, var(--gold) 45%, transparent); color:var(--gold); }
 .hook-chip.accent{ border-color:color-mix(in srgb, var(--coral) 45%, transparent); color:var(--coral); }
 @keyframes hookFloat{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-7px); } }
-@media (prefers-reduced-motion: reduce){ .hook-cloud, .hook-chip{ animation:none; } }
+@media (prefers-reduced-motion: reduce){
+  .hook-cloud, .hook-chip, .hook-label .hook-icon{ animation:none; }
+}
 
 /* marquee */
 .marquee{
