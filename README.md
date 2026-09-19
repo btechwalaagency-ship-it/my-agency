@@ -8,11 +8,17 @@ Website for BTech Marketing Wala — a full-service digital marketing studio bas
 
 | File | What it is |
 |---|---|
-| `index.html` | The entire website — HTML, CSS and JavaScript in one self-contained file. No build step, no dependencies. |
+| `index.html` | The homepage. |
+| `assets/style.css` | Shared stylesheet used by the homepage and every article page. |
+| `assets/site.js` | Shared JavaScript (mobile nav, scroll animations) used by every page. |
 | `assets/og-image.png` | Social share preview image (Open Graph / Twitter card), 1200×630. |
+| `articles/index.html` | Articles hub — lists all guides. |
+| `articles/*.html` | One in-depth guide per service (website design, branding, ads, video, SEO, etc.), linked from each service card on the homepage. Each has its own SEO meta tags and `Article` structured data. |
 | `robots.txt` | Tells search engines which pages to crawl and points to the sitemap. |
-| `sitemap.xml` | Lists the site's pages for search engines. |
+| `sitemap.xml` | Lists the site's pages for search engines, including every article. |
 | `CNAME` | Custom domain for GitHub Pages (`btechmarketingwala.in`). |
+
+To add a new article, copy an existing file in `articles/`, update its `<title>`, meta tags, JSON-LD and content, add a card for it to `articles/index.html`, link it from the matching service card in `index.html`, and add its URL to `sitemap.xml`.
 
 ## SEO
 
