@@ -290,6 +290,33 @@ nav.links a:hover, nav.links a.active{ color:var(--fg); border-color:var(--accen
 .hero-card .num{ font-family:'Fraunces',serif; font-size:2rem; font-weight:600; color:var(--paper); }
 .hero-card .label{ font-size:.8rem; color:#9A9DA6; margin-top:4px; }
 
+/* hook chips: fill the empty upper-right of the hero above the stat cards.
+   Normal flow (not absolutely positioned) so it can never overlap the cards
+   below it, regardless of how the headline reflows at in-between widths. */
+.hook-label{
+  font-family:'JetBrains Mono',monospace; font-size:.72rem; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--gold);
+  animation:fadeUp .6s ease both;
+}
+.hook-cloud{
+  display:flex; flex-wrap:wrap; gap:10px;
+  animation:fadeUp .6s ease .1s both;
+}
+@media (max-width:900px){ .hook-label, .hook-cloud{ display:none; } }
+.hook-chip{
+  display:inline-flex; align-items:center; gap:7px;
+  padding:8px 16px; border-radius:100px; border:1px solid #2A2E38;
+  background:var(--ink-2);
+  font-family:'JetBrains Mono',monospace; font-size:.76rem; font-weight:600; letter-spacing:.02em;
+  color:#B9BAC2; white-space:nowrap; box-shadow:0 10px 24px -12px rgba(0,0,0,.6);
+  animation:hookFloat 5s ease-in-out infinite;
+}
+.hook-chip::before{ content:''; width:5px; height:5px; border-radius:50%; background:currentColor; flex-shrink:0; }
+.hook-chip.gold{ border-color:color-mix(in srgb, var(--gold) 45%, transparent); color:var(--gold); }
+.hook-chip.accent{ border-color:color-mix(in srgb, var(--coral) 45%, transparent); color:var(--coral); }
+@keyframes hookFloat{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-7px); } }
+@media (prefers-reduced-motion: reduce){ .hook-cloud, .hook-chip{ animation:none; } }
+
 /* marquee */
 .marquee{
   border-top:1px solid #262A34; border-bottom:1px solid #262A34;
