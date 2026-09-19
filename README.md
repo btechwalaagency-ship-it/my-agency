@@ -43,7 +43,7 @@ To use a custom domain later, add it under Settings → Pages → Custom domain,
 
 Everything is plain text inside `index.html`:
 
-- **Contact email** — search for `btechwalaagency@gmail.com`
+- **Contact email** — search for `siddhantsharmaagency@gmail.com`
 - **Prices** — search for `9,000`, `8,000`, `1,500`, `500`, `7,000`
 - **Headlines and copy** — find the text and change it
 
@@ -51,4 +51,4 @@ Avoid editing anything inside `< >` brackets unless you know what it does — th
 
 ## Contact
 
-btechwalaagency@gmail.com
+siddhantsharmaagency@gmail.com
